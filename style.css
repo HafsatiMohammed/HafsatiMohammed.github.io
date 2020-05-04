@@ -1,5 +1,5 @@
 body{
-    background-color: gray;
+    background-color: white;
 }
 
 
@@ -41,7 +41,7 @@ table{
 }
 
 .PP1, .PP2{
-color: white;
+color: gray;
 text-align:center;
 text-shadow: 3px 2px 4px ;
 border-style: solid;
