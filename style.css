@@ -1,0 +1,89 @@
+body{
+    background-color: gray;
+}
+
+
+
+
+h1{
+color: navy;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+
+}
+
+
+p{
+    color:black;
+}
+
+ol{
+   border-style: solid;
+   border-color: navy;
+    
+}
+
+h2{
+color: navy;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+
+}
+
+
+td{
+    border: 3px solid navy;
+}
+table{
+    border-collapse: collapse;
+}
+
+.PP1, .PP2{
+color: white;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+}
+
+
+.V1, .V2{
+color: magenta;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+}
+
+
+.D1, .D2{
+color: red;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+}
+
+
+.O1, .O2{
+color: maroon;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+}
+
+
+
+.B1, .B2{
+color: green;
+text-align:center;
+text-shadow: 3px 2px 4px ;
+border-style: solid;
+
+}
+
+img{
+    hight:200px;
+    width:200px;
+    border-color: navy;
+    border-style: solid;
+}
