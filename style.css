@@ -137,10 +137,9 @@ nav ul li{
 
 .content4{
     position:absolute;
-   /* right: px;
-    
-    z-index: 2;*/
+   /* right: px;*/
  bottom: 40px;
+ z-index: 2;
     background: #FAEBD7;
     width: 150vw;
     padding: 3em;  
