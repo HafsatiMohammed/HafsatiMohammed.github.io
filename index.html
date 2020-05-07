@@ -6,157 +6,39 @@
         <link rel="stylesheet" href="style.css"/>
        </head> 
         <body>
-            <h1>  Examples of sound source separation in the higher-order ambisonic domain</h1>
-           <p> This web page presents some examples of sound source separation resulted from my Ph.D. work. </p>
-           <p> Context: My Ph.D. thesis focuses on the problem of navigating with 6DoF in the 3D sound fields that are acquired from a live recording. Nowadays,
-           there is a focus around virtual reality content that allows the user to move freely with 6DoF. Most of the proposed contents these past decades were purely synthetic images and sound.  By synthetic,
-           I mean they do not present a real environment. If ever I want to navigate virtually in a real environment, I must first record it, and therefore, use cameras and microphones. 
-my Ph.D. work treats the audio aspect of this application. I chose to work with ambisonics as a 3D technology due to its several advantages for this application.
-
- <p> Obstacles: The only problem with ambisonics is the difficulty in changing the point of view. Indeed, If ever a sound field is recorded and represented in the ambisonic domain, the representation of the entire
- sound field is given at the recording position. In order to simulate a movement from a point to another, the point of view must be changed. 
-    </p>
-<p>Solution: To respond to the problem, I developed a navigation strategy that is based on sound source localization and sound source separation. For my strategy, I proposed two variants.
-For the first variant, I applied a simple plane wave decomposition using full-band beamforming techniques, and a reconstruction of the sound field according to the current user position.
-For the second variant, I proposed to decompose the ambisonic sound field using a multichannel sound source separation, followed by a plane wave decomposition, and a reconstruction of the ambisonic sound field
-according to the current user position.
-For the sound source localization, we surveyed several approaches in the ambisonic domain and the microphone domain. We adapted the microphone domain methods to the ambisonic domain and assessed them through
-some numerical experiments. The results were satisfying in terms of localizing the sound sources. 
-My strategy was tested using an objective metric. The numerical experiment showed that the second variant of our strategy was efficient compared to one of the best approaches in state of the art.
-The second variant of our strategy is based on multichannel sound source separation of ambisonic sound fields. However, such techniques are lacking in terms of research.
-</p>
-<p> I contributed with the following works (examples of sound source separation are given bellow):
-</p>
-<ol>
-    <li>In the microphone domain,
-there is a multichannel sound separation approach that was proposed ten years ago and had never been used in the ambisonic domain yet. 
-The approach is known as the multichannel sound source separation based on the local Gaussian model. I derived the equations of the model from the microphone domain to the ambisonic domain.
-It turned out that such a technique can be used in the ambisonic domain. I validated the approach with some numerical experiments. Refereed to as FASST </li>
-    <li> I proposed to use the local Gaussian model approach along with some side information that is coming from live recording spot microphones. I proposed a method to help the pre-processing
- of the side information and validate the efficiency of each block of the workflow through some numerical experiments. Refereed to as SpotMic  </li>
-    <li> I proposed to use neural networks in the place of the spot microphones for musical content. I developed two different neural networks and compared the performances of the
-multichannel sound source separation through numerical experiments. Refereed to as NN_EachForOne and NN_OneForAll  </li>
-</ol>
-
- <h2> Examples </h2>
- <p> The examples work on firefox and google chrome. !! Please listen with headphones !!</p>
- <p class= "PP1" >  First example </p>
- <table>
-    <tr>
-      <td> mixture </td>
-      <td colspan=4> <audio controls> <source src="Example1/mixture.wav"></source> </audio> </td>
-
-        </tr>
-                <tr>
-      <td> ***  </td>
-    <td class= "V1">  Voice  </td>
-      <td class= "D1">  Drums  </td>
-      <td class= "O1">  Other  </td>
-      <td class= "B1">  Bass </td>
-        </tr>
-        <tr>
-      <td> Truth </td>
-      <td> <audio controls> <source src="Example1/Truth/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/Truth/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/Truth/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/Truth/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-      <td> FASST </td>
-      <td> <audio controls> <source src="Example1/FASST/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/FASST/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/FASST/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/FASST/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-      <td> SpotMic </td>
-      <td> <audio controls> <source src="Example1/SpotMic/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/SpotMic/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/SpotMic/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/SpotMic/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-     <td> NN1 </td>
-      <td> <audio controls> <source src="Example1/NN1/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/NN1/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/NN1/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/NN1/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-     <td> NN2 </td>
-      <td> <audio controls> <source src="Example1/NN2/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/NN2/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/NN2/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example1/NN2/b4.wav"></source> </audio> </td>
-        </tr>
-    
-    
-    
-    
- </table>>
- <p class= "PP2"> Second example <p>
- 
- <table>
-    <tr>
-      <td> mixture </td>
-      <td colspan=4> <audio controls> <source src="Example2/mixture.wav"></source> </audio> </td>
-
-        </tr>
-            <tr>
-      <td> ***  </td>
-      <td class= "V2">  Voice  </td>
-      <td class= "D2">  Drums  </td>
-      <td class= "O2">  Other  </td>
-      <td class= "B2">  Bass </td>
-        </tr>
-        <tr>
-      <td> Truth </td>
-      <td> <audio controls> <source src="Example2/Truth/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/Truth/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/Truth/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/Truth/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-      <td> FASST </td>
-      <td> <audio controls> <source src="Example2/FASST/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/FASST/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/FASST/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/FASST/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-      <td> SpotMic </td>
-      <td> <audio controls> <source src="Example2/SpotMic/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/SpotMic/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/SpotMic/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/SpotMic/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-     <td> NN_EachForOne </td>
-      <td> <audio controls> <source src="Example2/NN1/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/NN1/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/NN1/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/NN1/b4.wav"></source> </audio> </td>
-        </tr>
-          <tr>
-     <td> NN_OneForAll </td>
-      <td> <audio controls> <source src="Example2/NN2/b1.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/NN2/b2.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/NN2/b3.wav"></source> </audio>  </td>
-      <td> <audio controls> <source src="Example2/NN2/b4.wav"></source> </audio> </td>
-        </tr>
-    
- </table>>
- 
- <p> This work was done by Mohammed HAFSATI under the supervision of:</p>
- <ul>
-    <li> Rémi GRIBONVAL </li>
-    <li> Nicolas EPAIN </li>
-    <li> Nancy BERTIN </li>
-</ul>
- 
- 
- <p> If you have any questions contact me by e-mail : <a href="mailtomail : hafsati.mohammed@gmail.com"> hafsati.mohammed@gmail.com </a> </p>
- <img src="MePicture.png" alt="MonImage" title="Me"/>
+            <nav>
+             <ul>
+              <li class="deroulant"><a href="#"> About my thesis </a>
+                 <ul class="sous">
+                   <li><a href="./HTML_Files/Context.html"> Context </a>
+                   <li><a href="./HTML_Files/Obstacles.html"> Obstacle </a>
+                   <li><a href="./HTML_Files/Solutions.html"> Solutions </a>
+                   <li><a href="./HTML_Files/Contributions.html"> Contributions (sound source separation) </a>
+                 </ul>
+              </li>
+              <li class="deroulant"><a href="#"> Examples</a>
+                <ul class="sous">
+                 <li><a href="./HTML_Files/Example1.html"> Example1</a>
+                 <li><a href="./HTML_Files/Example2.html"> Example2 </a>
+                </ul>
+              </li>
+               <li class="deroulant"><a href="./HTML_Files/Contact.html"> Contact me</a>
+              </li>
+                               </li>
+               <li class="deroulant"><a href="index.html"> Home page</a>
+              </li>
+             </ul>
+            </nav>
+            
+            
+            
+            
+            
+            <div class= "content">
+                <h1 class="title" >   This web page presents some examples of sound source separation resulted from my Ph.D. work. For further information please check the above scrolling menu</h1>
+            </div>
+          
+         
         </body>
     </html>
     
