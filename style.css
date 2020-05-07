@@ -185,10 +185,10 @@ text-shadow: 3px 2px 4px ;
 
  img {
   border-radius: 50%;
-  position: absolute;
+  /*position: absolute;
   left: 0;
     right: -1% !important;
-    bottom: 190px;
+    bottom: 190px;*/
   
 }
 .Para2, ol{
