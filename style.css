@@ -161,6 +161,7 @@ font-style: italic;
 
 background-image: var(--gradient);
 background-clip: text;
+-webkit-background-clip: text;
 color: transparent;
 background-size: 400%;
 animation: bg-animation 5s infinite alternate;
