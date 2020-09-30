@@ -39,6 +39,13 @@
 
  <p class= "PP1" >  First example </p>
   <p class="Para"> The examples work on firefox and google chrome. !! Please listen with headphones !!</p>
+    
+<p class="Para2" > In these examples, we simulated two ambisonic sound scenes with four sound sources coming from randomly chosen directions but considered known for the algorithms.</p> 
+<p class="Para2" > - For the first algorithm referred to as FASST, we used a local gaussian approach with an NMF constraint. The sound sources' spatial covariance matrices were initialized with 1-rank matrices corresponding to the direct path sound sources spherical harmonic vectors. For the spectral part, We initialized the NMF matrices randomly. A fifth sound source was added and initialized with a full-rank spatial covariance matrix (Identity matrix). We fixed the number iterations of the EM algorithm to 150.</p> 
+<p class="Para2" > - For the second algorithm refereed to as SpotMic, using the LGM approach with the full-rank model, we used the method described in my sixth chapter. Side information recorded live by four spot microphones (close to the sound sources) was used to initialize the spectral part. We initialized the spatial covariance matrices with full-rank matrices (Identity matrices). We fixed the number of iterations to 10. We activated all the blocks described in my sixth chapter.</p>
+<p class="Para2" > - For the third and the fourth approaches, referred to them as NN_EachForOne and NN_OneForAll, respectively. We trained two different neural networks (described in my seventh chapter). We Used the LGM approach with the full-rank model. We used the output of the neural networks to initialize the spectra and fixed the number of iterations to 10. The listening examples are pulled from the test data set.</p>
+  
+    
  <table>
     <tr>
       <td> mixture </td>
